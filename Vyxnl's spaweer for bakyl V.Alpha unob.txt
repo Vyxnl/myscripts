@@ -130,7 +130,7 @@ Weapons.MouseButton1Down:connect(function()
 				}, 
 				[5] = 
 				{
-					["Name"] = "Ðœå’Œå¹³Trident", 
+					["Name"] = "To '¹å¹Trident", 
 					["Stack"] = 0
 				}, 
 				[6] = 
