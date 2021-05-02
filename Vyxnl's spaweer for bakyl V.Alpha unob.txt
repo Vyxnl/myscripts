@@ -1,0 +1,961 @@
+-- Gui to Lua
+-- Version: 3.2
+
+-- Instances:
+
+local ScreenGui = Instance.new("ScreenGui")
+local Frame = Instance.new("Frame")
+local ScrollingFrame = Instance.new("ScrollingFrame")
+local Weapons = Instance.new("TextButton")
+local Shields = Instance.new("TextButton")
+local Clothing = Instance.new("TextButton")
+local Helmets = Instance.new("TextButton")
+local Capes = Instance.new("TextButton")
+local DropPik = Instance.new("TextButton")
+local Laurels = Instance.new("TextButton")
+local TextLabel = Instance.new("TextLabel")
+local V = Instance.new("TextButton")
+local Loginbutton = Instance.new("TextButton")
+local KeyForm = Instance.new("ImageLabel")
+local Keyframe = Instance.new("Frame")
+local Key = Instance.new("TextBox")
+
+--Properties:
+
+ScreenGui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+ScreenGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+
+KeyForm.Name = "KeyForm"
+KeyForm.Parent = ScreenGui
+KeyForm.Active = true
+KeyForm.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+KeyForm.Position = UDim2.new(0.262036294, 0, 0.37663883, 0)
+KeyForm.Size = UDim2.new(0, 581, 0, 224)
+KeyForm.Image = "http://www.roblox.com/asset/?id=6289845007"
+KeyForm.Visible = true
+KeyForm.Draggable = true
+
+Loginbutton.Name = "Loginbutton"
+Loginbutton.Parent = KeyForm
+Loginbutton.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Loginbutton.Position = UDim2.new(0.327022374, 0, 0.678571403, 0)
+Loginbutton.Size = UDim2.new(0, 200, 0, 50)
+Loginbutton.Font = Enum.Font.SourceSans
+Loginbutton.Text = "Login"
+Loginbutton.TextColor3 = Color3.fromRGB(0, 0, 0)
+Loginbutton.TextScaled = true
+Loginbutton.TextSize = 14.000
+Loginbutton.TextWrapped = true
+Loginbutton.MouseButton1Down:connect(function()
+	if Key.Text == "ugolavd" then
+		KeyForm.Visible = false
+		Frame.Visible = true
+	end
+end)
+
+Keyframe.Name = "Keyframe"
+Keyframe.Parent = KeyForm
+Keyframe.Active = true
+Keyframe.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Keyframe.Position = UDim2.new(0.327022374, 0, 0.334821433, 0)
+Keyframe.Size = UDim2.new(0, 200, 0, 41)
+
+Key.Name = "Key"
+Key.Parent = Keyframe
+Key.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Key.Size = UDim2.new(0, 200, 0, 41)
+Key.Font = Enum.Font.SourceSans
+Key.PlaceholderColor3 = Color3.fromRGB(0, 0, 0)
+Key.PlaceholderText = "Key"
+Key.Text = ""
+Key.TextColor3 = Color3.fromRGB(0, 0, 0)
+Key.TextScaled = true
+Key.TextSize = 14.000
+Key.TextWrapped = true
+
+Frame.Parent = ScreenGui
+Frame.BackgroundColor3 = Color3.fromRGB(73, 139, 220)
+Frame.BackgroundTransparency = 1.000
+Frame.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Frame.BorderSizePixel = 2
+Frame.Position = UDim2.new(0.10687831, 0, 0.463144958, 0)
+Frame.Size = UDim2.new(0, 287, 0, 301)
+Frame.Visible = false
+
+ScrollingFrame.Parent = Frame
+ScrollingFrame.Active = true
+ScrollingFrame.BackgroundColor3 = Color3.fromRGB(61, 61, 61)
+ScrollingFrame.BorderColor3 = Color3.fromRGB(248, 165, 0)
+ScrollingFrame.Size = UDim2.new(0, 287, 0, 301)
+ScrollingFrame.CanvasSize = UDim2.new(0, 0, 3, 0)
+
+Weapons.Name = "Weapons"
+Weapons.Parent = ScrollingFrame
+Weapons.BackgroundColor3 = Color3.fromRGB(248, 165, 48)
+Weapons.BorderSizePixel = 0
+Weapons.Position = UDim2.new(0, 9, 0, 62)
+Weapons.Size = UDim2.new(0, 106, 0, 50)
+Weapons.Font = Enum.Font.GothamBold
+Weapons.Text = "Custom Weapons"
+Weapons.TextColor3 = Color3.fromRGB(255, 255, 255)
+Weapons.TextScaled = true
+Weapons.TextSize = 14.000
+Weapons.TextWrapped = true
+Weapons.MouseButton1Down:connect(function()
+	local A_1 = "updateStats"
+	local A_2 = 
+		{
+			["Inventory"] = 
+			{
+				[1] = 
+				{
+					["Name"] = "Ðœå’Œå¹³Z A E X", 
+					["Stack"] = 0
+				}, 
+				[2] = 
+				{
+					["Name"] = "å’Œå¹³ Ember Slayer", 
+					["Stack"] = 0
+				}, 
+				[3] = 
+				{
+					["Name"] = "Ðœå’Œå¹³Ferrum Tenebris", 
+					["Stack"] = 0
+				}, 
+				[4] = 
+				{
+					["Name"] = "Ðœå’Œå¹³Pr0Surge", 
+					["Stack"] = 0
+				}, 
+				[5] = 
+				{
+					["Name"] = "Ðœå’Œå¹³Trident", 
+					["Stack"] = 0
+				}, 
+				[6] = 
+				{
+					["Name"] = "Ðœå’Œå¹³HawkBlade", 
+					["Stack"] = 0
+				}, 
+				[7] = 
+				{
+					["Name"] = "Ðœå’Œå¹³MrGor", 
+					["Stack"] = 0
+				}, 
+				[8] = 
+				{
+					["Name"] = "Må’Œå¹³Cheesy", 
+					["Stack"] = 0
+				}, 
+				[9] = 
+				{
+					["Name"] = "Ðœå’Œå¹³Lex", 
+					["Stack"] = 0
+				}, 
+				[10] = 
+				{
+					["Name"] = "Ðœå’Œå¹³Oathkeeper", 
+					["Stack"] = 0
+				}, 
+				[11] = 
+				{
+					["Name"] = "Pilum,", 
+					["Stack"] = 999999
+				}, 
+				[12] = 
+				{
+					["Name"] = "Ðœå’Œå¹³FRIED RICE", 
+					["Stack"] = 0
+				}, 
+				[13] = 
+				{
+					["Name"] = "å’Œå¹³ Karan GS", 
+					["Stack"] = 0
+				}, 
+				[14] = 
+				{
+					["Name"] = "msword", 
+					["Stack"] = 0
+				}, 
+				[15] = 
+				{
+					["Name"] = "Vulcans Fire", 
+					["Stack"] = 0
+				}, 
+				[16] = 
+				{
+					["Name"] = "Ðœå’Œå¹³Nocta Custom", 
+					["Stack"] = 0
+				}, 
+				[17] = 
+				{
+				}, 
+				[18] = 
+				{
+				}
+			}, 
+			["Equipped"] = 
+			{
+				[1] = 
+				{
+					["Name"] = "", 
+					["Stack"] = 0
+				}, 
+				[2] = 
+				{
+				}
+			}, 
+			["Body"] = 
+			{
+				[1] = 
+				{
+				}, 
+				[2] = 
+				{
+				}, 
+				[3] = 
+				{
+				}, 
+				[4] = 
+				{
+				}, 
+				[5] = 
+				{
+				}
+			}
+		}
+	local Event = game:GetService("Players").LocalPlayer.BigmanFunction
+	Event:InvokeServer(A_1, A_2)
+
+end)
+Shields.Name = "Shields"
+Shields.Parent = ScrollingFrame
+Shields.BackgroundColor3 = Color3.fromRGB(248, 165, 48)
+Shields.BorderSizePixel = 0
+Shields.Position = UDim2.new(0, 155, 0, 62)
+Shields.Size = UDim2.new(0, 106, 0, 50)
+Shields.Font = Enum.Font.GothamBold
+Shields.Text = "Custom Shields"
+Shields.TextColor3 = Color3.fromRGB(255, 255, 255)
+Shields.TextScaled = true
+Shields.TextSize = 14.000
+Shields.TextWrapped = true
+Shields.MouseButton1Down:connect(function()
+	local A_1 = "updateStats"
+	local A_2 = 
+		{
+			["Inventory"] = 
+			{
+				[1] = 
+				{
+					["Name"] = "test", 
+					["Stack"] = 0
+				}, 
+				[2] = 
+				{
+					["Name"] = "mich*", 
+					["Stack"] = 0
+				}, 
+				[3] = 
+				{
+					["Name"] = "Ðœå’Œå¹³Icy Shield", 
+					["Stack"] = 0
+				}, 
+				[4] = 
+				{
+					["Name"] = "Ð", 
+					["Stack"] = 0
+				}, 
+				[5] = 
+				{
+					["Name"] = "", 
+					["Stack"] = 0
+				}, 
+				[6] = 
+				{
+					["Name"] = "", 
+					["Stack"] = 0
+				}, 
+				[7] = 
+				{
+					["Name"] = "", 
+					["Stack"] = 0
+				}, 
+				[8] = 
+				{
+					["Name"] = "", 
+					["Stack"] = 0
+				}, 
+				[9] = 
+				{
+					["Name"] = "", 
+					["Stack"] = 0
+				}, 
+				[10] = 
+				{
+					["Name"] = "", 
+					["Stack"] = 0
+				}, 
+				[11] = 
+				{
+					["Name"] = "", 
+					["Stack"] = 0
+				}, 
+				[12] = 
+				{
+					["Name"] = "", 
+					["Stack"] = 0
+				}, 
+				[13] = 
+				{
+					["Name"] = "", 
+					["Stack"] = 0
+				}, 
+				[14] = 
+				{
+					["Name"] = "", 
+					["Stack"] = 0
+				}, 
+				[15] = 
+				{
+					["Name"] = "", 
+					["Stack"] = 0
+				}, 
+				[16] = 
+				{
+					["Name"] = "", 
+					["Stack"] = 0
+				}, 
+				[17] = 
+				{
+				}, 
+				[18] = 
+				{
+				}
+			}, 
+			["Equipped"] = 
+			{
+				[1] = 
+				{
+					["Name"] = "", 
+					["Stack"] = 0
+				}, 
+				[2] = 
+				{
+				}
+			}, 
+			["Body"] = 
+			{
+				[1] = 
+				{
+				}, 
+				[2] = 
+				{
+				}, 
+				[3] = 
+				{
+				}, 
+				[4] = 
+				{
+				}, 
+				[5] = 
+				{
+				}
+			}
+		}
+	local Event = game:GetService("Players").LocalPlayer.BigmanFunction
+	Event:InvokeServer(A_1, A_2)
+end)
+Clothing.Name = "Clothing"
+Clothing.Parent = ScrollingFrame
+Clothing.BackgroundColor3 = Color3.fromRGB(248, 165, 48)
+Clothing.BorderSizePixel = 0
+Clothing.Position = UDim2.new(0, 9, 0, 139)
+Clothing.Size = UDim2.new(0, 106, 0, 50)
+Clothing.Font = Enum.Font.GothamBold
+Clothing.Text = "Custom Clothing"
+Clothing.TextColor3 = Color3.fromRGB(255, 255, 255)
+Clothing.TextScaled = true
+Clothing.TextSize = 14.000
+Clothing.TextWrapped = true
+Clothing.MouseButton1Down:connect(function()
+	local A_1 = "updateStats"
+	local A_2 = 
+		{
+			["Inventory"] = 
+			{
+				[1] = 
+				{
+					["Name"] = "Ðœå’Œå¹³Keddish Stola", 
+					["Stack"] = 0
+				}, 
+				[2] = 
+				{
+					["Name"] = "Ðœå’Œå¹³Kaawoe Stola", 
+					["Stack"] = 0
+				}, 
+				[3] = 
+				{
+					["Name"] = "Ðœå’Œå¹³War Musculata", 
+					["Stack"] = 0
+				}, 
+				[4] = 
+				{
+					["Name"] = "Ðœå’Œå¹³Zaex Musculata", 
+					["Stack"] = 0
+				}, 
+				[5] = 
+				{
+					["Name"] = "", 
+					["Stack"] = 0
+				}, 
+				[6] = 
+				{
+					["Name"] = "", 
+					["Stack"] = 0
+				}, 
+				[7] = 
+				{
+					["Name"] = "", 
+					["Stack"] = 0
+				}, 
+				[8] = 
+				{
+					["Name"] = "", 
+					["Stack"] = 0
+				}, 
+				[9] = 
+				{
+					["Name"] = "", 
+					["Stack"] = 0
+				}, 
+				[10] = 
+				{
+					["Name"] = "", 
+					["Stack"] = 0
+				}, 
+				[11] = 
+				{
+					["Name"] = "", 
+					["Stack"] = 0
+				}, 
+				[12] = 
+				{
+					["Name"] = "", 
+					["Stack"] = 0
+				}, 
+				[13] = 
+				{
+					["Name"] = "", 
+					["Stack"] = 0
+				}, 
+				[14] = 
+				{
+					["Name"] = "", 
+					["Stack"] = 0
+				}, 
+				[15] = 
+				{
+					["Name"] = "", 
+					["Stack"] = 0
+				}, 
+				[16] = 
+				{
+					["Name"] = "", 
+					["Stack"] = 0
+				}, 
+				[17] = 
+				{
+				}, 
+				[18] = 
+				{
+				}
+			}, 
+			["Equipped"] = 
+			{
+				[1] = 
+				{
+					["Name"] = "", 
+					["Stack"] = 0
+				}, 
+				[2] = 
+				{
+				}
+			}, 
+			["Body"] = 
+			{
+				[1] = 
+				{
+				}, 
+				[2] = 
+				{
+				}, 
+				[3] = 
+				{
+				}, 
+				[4] = 
+				{
+				}, 
+				[5] = 
+				{
+				}
+			}
+		}
+	local Event = game:GetService("Players").LocalPlayer.BigmanFunction
+	Event:InvokeServer(A_1, A_2)
+end)
+Helmets.Name = "Helmets"
+Helmets.Parent = ScrollingFrame
+Helmets.BackgroundColor3 = Color3.fromRGB(248, 165, 48)
+Helmets.BorderSizePixel = 0
+Helmets.Position = UDim2.new(0, 155, 0, 139)
+Helmets.Size = UDim2.new(0, 106, 0, 50)
+Helmets.Font = Enum.Font.GothamBold
+Helmets.Text = "Custom Helmets"
+Helmets.TextColor3 = Color3.fromRGB(255, 255, 255)
+Helmets.TextScaled = true
+Helmets.TextSize = 14.000
+Helmets.TextWrapped = true
+Helmets.MouseButton1Down:connect(function()
+	local A_1 = "updateStats"
+	local A_2 = 
+		{
+			["Inventory"] = 
+			{
+				[1] = 
+				{
+					["Name"] = "Ðœå’Œå¹³syns helm", 
+					["Stack"] = 0
+				}, 
+				[2] = 
+				{
+					["Name"] = "Ðœå’Œå¹³Imperators Helm", 
+					["Stack"] = 0
+				}, 
+				[3] = 
+				{
+					["Name"] = "Ðœå’Œå¹³Imperators Plated Helm", 
+					["Stack"] = 0
+				}, 
+				[4] = 
+				{
+					["Name"] = "Ðœå’Œå¹³Zaex Helm", 
+					["Stack"] = 0
+				}, 
+				[5] = 
+				{
+					["Name"] = "Ðœå’Œå¹³ Templar Helmet", 
+					["Stack"] = 0
+				}, 
+				[6] = 
+				{
+					["Name"] = "Ðœå’Œå¹³Plutos Hood", 
+					["Stack"] = 0
+				}, 
+				[7] = 
+				{
+					["Name"] = "Ðœå’Œå¹³ApostleHelmet", 
+					["Stack"] = 0
+				}, 
+				[8] = 
+				{
+					["Name"] = "Ðœå’Œå¹³Wars Helmet", 
+					["Stack"] = 0
+				}, 
+				[9] = 
+				{
+					["Name"] = "Champion of Judea Helmet", 
+					["Stack"] = 0
+				}, 
+				[10] = 
+				{
+					["Name"] = "", 
+					["Stack"] = 0
+				}, 
+				[11] = 
+				{
+					["Name"] = "", 
+					["Stack"] = 0
+				}, 
+				[12] = 
+				{
+					["Name"] = "", 
+					["Stack"] = 0
+				}, 
+				[13] = 
+				{
+					["Name"] = "", 
+					["Stack"] = 0
+				}, 
+				[14] = 
+				{
+					["Name"] = "", 
+					["Stack"] = 0
+				}, 
+				[15] = 
+				{
+					["Name"] = "", 
+					["Stack"] = 0
+				}, 
+				[16] = 
+				{
+					["Name"] = "", 
+					["Stack"] = 0
+				}, 
+				[17] = 
+				{
+				}, 
+				[18] = 
+				{
+				}
+			}, 
+			["Equipped"] = 
+			{
+				[1] = 
+				{
+					["Name"] = "", 
+					["Stack"] = 0
+				}, 
+				[2] = 
+				{
+				}
+			}, 
+			["Body"] = 
+			{
+				[1] = 
+				{
+				}, 
+				[2] = 
+				{
+				}, 
+				[3] = 
+				{
+				}, 
+				[4] = 
+				{
+				}, 
+				[5] = 
+				{
+				}
+			}
+		}
+	local Event = game:GetService("Players").LocalPlayer.BigmanFunction
+	Event:InvokeServer(A_1, A_2)
+end)
+Capes.Name = "Capes"
+Capes.Parent = ScrollingFrame
+Capes.BackgroundColor3 = Color3.fromRGB(248, 165, 48)
+Capes.BorderSizePixel = 0
+Capes.Position = UDim2.new(0, 9, 0, 217)
+Capes.Size = UDim2.new(0, 106, 0, 50)
+Capes.Font = Enum.Font.GothamBold
+Capes.Text = "Custom Capes"
+Capes.TextColor3 = Color3.fromRGB(255, 255, 255)
+Capes.TextScaled = true
+Capes.TextSize = 14.000
+Capes.TextWrapped = true
+Capes.MouseButton1Down:connect(function()
+	local A_1 = "updateStats"
+	local A_2 = 
+		{
+			["Inventory"] = 
+			{
+				[1] = 
+				{
+					["Name"] = "Ðœå’Œå¹³Wars Cape", 
+					["Stack"] = 0
+				}, 
+				[2] = 
+				{
+					["Name"] = "Ðœå’Œå¹³ Crimson Cloak", 
+					["Stack"] = 0
+				}, 
+				[3] = 
+				{
+					["Name"] = "Ðœå’Œå¹³Renault", 
+					["Stack"] = 0
+				}, 
+				[4] = 
+				{
+					["Name"] = "Ðœå’Œå¹³Fried Rice Armor", 
+					["Stack"] = 0
+				}, 
+				[5] = 
+				{
+					["Name"] = "Ðœå’Œå¹³Shinobilionheart Armor", 
+					["Stack"] = 0
+				}, 
+				[6] = 
+				{
+					["Name"] = "Ðœå’Œå¹³Zaex  Armor", 
+					["Stack"] = 0
+				}, 
+				[7] = 
+				{
+					["Name"] = "Ðœå’Œå¹³ApostleCustom", 
+					["Stack"] = 0
+				}, 
+				[8] = 
+				{
+					["Name"] = "Ðœå’Œå¹³Only's Armor", 
+					["Stack"] = 0
+				}, 
+				[9] = 
+				{
+					["Name"] = "HussCape", 
+					["Stack"] = 0
+				}, 
+				[10] = 
+				{
+					["Name"] = "Ðœå’Œå¹³syns cape", 
+					["Stack"] = 0
+				}, 
+				[11] = 
+				{
+					["Name"] = "Ðœå’Œå¹³ Keddish Cape", 
+					["Stack"] = 0
+				}, 
+				[12] = 
+				{
+					["Name"] = "", 
+					["Stack"] = 0
+				}, 
+				[13] = 
+				{
+					["Name"] = "", 
+					["Stack"] = 0
+				}, 
+				[14] = 
+				{
+					["Name"] = "", 
+					["Stack"] = 0
+				}, 
+				[15] = 
+				{
+					["Name"] = "", 
+					["Stack"] = 0
+				}, 
+				[16] = 
+				{
+					["Name"] = "", 
+					["Stack"] = 0
+				}, 
+				[17] = 
+				{
+				}, 
+				[18] = 
+				{
+				}
+			}, 
+			["Equipped"] = 
+			{
+				[1] = 
+				{
+					["Name"] = "", 
+					["Stack"] = 0
+				}, 
+				[2] = 
+				{
+				}
+			}, 
+			["Body"] = 
+			{
+				[1] = 
+				{
+				}, 
+				[2] = 
+				{
+				}, 
+				[3] = 
+				{
+				}, 
+				[4] = 
+				{
+				}, 
+				[5] = 
+				{
+				}
+			}
+		}
+	local Event = game:GetService("Players").LocalPlayer.BigmanFunction
+	Event:InvokeServer(A_1, A_2)
+end)
+DropPik.Name = "Drop Pik"
+DropPik.Parent = ScrollingFrame
+DropPik.BackgroundColor3 = Color3.fromRGB(248, 165, 48)
+DropPik.BorderSizePixel = 0
+DropPik.Position = UDim2.new(0, 155, 0, 217)
+DropPik.Size = UDim2.new(0, 106, 0, 50)
+DropPik.Font = Enum.Font.GothamBold
+DropPik.Text = "Spam Drop Pickace (Must be in inventory)"
+DropPik.TextColor3 = Color3.fromRGB(255, 255, 255)
+DropPik.TextScaled = true
+DropPik.TextSize = 14.000
+DropPik.TextWrapped = true
+DropPik.MouseButton1Down:connect(function()
+	while wait(2) do
+		local A_1 = "dropInvItem"
+		local A_2 = game:GetService("ReplicatedStorage").Items.WEAPONS.PermanentTools.Pickaxe
+		local Event = game:GetService("Players")["LocalPlayer"].GwyneddEventUn
+		Event:FireServer(A_1, A_2)
+	end
+end)
+Laurels.Name = "Laurels"
+Laurels.Parent = ScrollingFrame
+Laurels.BackgroundColor3 = Color3.fromRGB(248, 165, 48)
+Laurels.BorderSizePixel = 0
+Laurels.Position = UDim2.new(0, 9, 0, 296)
+Laurels.Size = UDim2.new(0, 106, 0, 50)
+Laurels.Font = Enum.Font.GothamBold
+Laurels.Text = "Custom Laurels"
+Laurels.TextColor3 = Color3.fromRGB(255, 255, 255)
+Laurels.TextScaled = true
+Laurels.TextSize = 14.000
+Laurels.TextWrapped = true
+Laurels.MouseButton1Down:connect(function()
+	local A_1 = "updateStats"
+	local A_2 = 
+		{
+			["Inventory"] = 
+			{
+				[1] = 
+				{
+					["Name"] = "Ðœå’Œå¹³Dec's Laurel", 
+					["Stack"] = 0
+				}, 
+				[2] = 
+				{
+					["Name"] = "Ðœå’Œå¹³Fried's Laurel", 
+					["Stack"] = 0
+				}, 
+				[3] = 
+				{
+					["Name"] = "Imperial Laurel", 
+					["Stack"] = 0
+				}, 
+				[4] = 
+				{
+					["Name"] = "Green Laurel", 
+					["Stack"] = 0
+				}, 
+				[5] = 
+				{
+					["Name"] = "Silver Laurel", 
+					["Stack"] = 0
+				}, 
+				[6] = 
+				{
+					["Name"] = "Bronze Laurel", 
+					["Stack"] = 0
+				}, 
+				[7] = 
+				{
+					["Name"] = "Golden Laurel", 
+					["Stack"] = 0
+				}, 
+				[8] = 
+				{
+					["Name"] = "Golden Fasces", 
+					["Stack"] = 0
+				}, 
+				[9] = 
+				{
+					["Name"] = "Lictor Fasces", 
+					["Stack"] = 0
+				}, 
+				[10] = 
+				{
+					["Name"] = "", 
+					["Stack"] = 0
+				}, 
+				[11] = 
+				{
+					["Name"] = "", 
+					["Stack"] = 0
+				}, 
+				[12] = 
+				{
+					["Name"] = "", 
+					["Stack"] = 0
+				}, 
+				[13] = 
+				{
+					["Name"] = "", 
+					["Stack"] = 0
+				}, 
+				[14] = 
+				{
+					["Name"] = "", 
+					["Stack"] = 0
+				}, 
+				[15] = 
+				{
+					["Name"] = "", 
+					["Stack"] = 0
+				}, 
+				[16] = 
+				{
+					["Name"] = "", 
+					["Stack"] = 0
+				}, 
+				[17] = 
+				{
+				}, 
+				[18] = 
+				{
+				}
+			}, 
+			["Equipped"] = 
+			{
+				[1] = 
+				{
+					["Name"] = "", 
+					["Stack"] = 0
+				}, 
+				[2] = 
+				{
+				}
+			}, 
+			["Body"] = 
+			{
+				[1] = 
+				{
+				}, 
+				[2] = 
+				{
+				}, 
+				[3] = 
+				{
+				}, 
+				[4] = 
+				{
+				}, 
+				[5] = 
+				{
+				}
+			}
+		}
+	local Event = game:GetService("Players").LocalPlayer.BigmanFunction
+	Event:InvokeServer(A_1, A_2)
+end)
+TextLabel.Parent = ScrollingFrame
+TextLabel.BackgroundColor3 = Color3.fromRGB(61, 61, 61)
+TextLabel.BorderColor3 = Color3.fromRGB(248, 165, 0)
+TextLabel.Size = UDim2.new(0, 274, 0, 50)
+TextLabel.Font = Enum.Font.GothamBold
+TextLabel.Text = "Spawner for Bakyl by Vyxnl"
+TextLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel.TextSize = 17.000
+TextLabel.TextWrapped = true
+
+V.Name = "V"
+V.Parent = ScrollingFrame
+V.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+V.BackgroundTransparency = 1.000
+V.LayoutOrder = 1
+V.Position = UDim2.new(0, 0, 0.867109656, 0)
+V.Size = UDim2.new(0, 65, 0, 40)
+V.Font = Enum.Font.SourceSansBold
+V.Text = "V.Alpha"
+V.TextColor3 = Color3.fromRGB(255, 255, 255)
+V.TextSize = 14.000
