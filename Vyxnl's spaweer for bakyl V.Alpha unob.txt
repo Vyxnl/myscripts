@@ -22,7 +22,7 @@ local Key = Instance.new("TextBox")
 
 --Properties:
 
-ScreenGui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+ScreenGui.Parent = game.CoreGui
 ScreenGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
 
 KeyForm.Name = "KeyForm"
@@ -88,6 +88,7 @@ ScrollingFrame.BackgroundColor3 = Color3.fromRGB(61, 61, 61)
 ScrollingFrame.BorderColor3 = Color3.fromRGB(248, 165, 0)
 ScrollingFrame.Size = UDim2.new(0, 287, 0, 301)
 ScrollingFrame.CanvasSize = UDim2.new(0, 0, 3, 0)
+ScrollingFrame.Draggable = true
 
 Weapons.Name = "Weapons"
 Weapons.Parent = ScrollingFrame
@@ -263,7 +264,7 @@ Shields.MouseButton1Down:connect(function()
 				}, 
 				[4] = 
 				{
-					["Name"] = "Ð", 
+					["Name"] = "", 
 					["Stack"] = 0
 				}, 
 				[5] = 
